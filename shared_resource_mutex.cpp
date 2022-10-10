@@ -8,8 +8,7 @@ pthread_mutex_t mutext = PTHREAD_MUTEX_INITIALIZER;
 //Thread function to modify shared resource
 void* inc_dec_resource(void* arg){
 
-    //get the pointer from main thread and dereference it to put the value in resource_value
-
+    pthread_mutex_lock(&mutex);
     int resource_value = *(int *)arg;
     for(int i=0; i < iterations; i++){
         shared_resource += resource_value;
