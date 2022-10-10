@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <pthreads.h>
+#include <pthread.h>
 
 #define iterations 300000000
 long long shared_resource = 0;
