@@ -4,7 +4,7 @@
 #define iterations 300000000
 long long shared_resource = 0;
 
-pthread_mutex_t mutext = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 //Thread function to modify shared resource
 void* inc_dec_resource(void* arg){
 
