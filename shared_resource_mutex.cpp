@@ -28,7 +28,7 @@ int main(void){
     //Thread 2 to increment shared resource
     int value2 = -1;
     pthread_create(&tid2, NULL, inc_dec_resource, &value2);
-    pthread_join(tib1, NULL);
+    pthread_join(tid1, NULL);
     pthread_join(tid2, NULL);
     
     printf("Shared resource value: %lld\n", shared_resource);
